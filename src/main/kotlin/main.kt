@@ -38,8 +38,7 @@ import kotlin.math.absoluteValue
 
 fun main() {
     val list = LinkedList(3, 2, 1, 4, 5)
-    //list.printReversed()
-    println(list.middle()!!.value)
+    list.printReversed()
 }
 
 fun <T> LinkedList<T>.printReversed() {
@@ -49,17 +48,4 @@ fun <T> LinkedList<T>.printReversed() {
 fun <T> Node<T>.printInReverse() {
     this.next?.printInReverse()
     print(this.value)
-}
-
-fun <T> LinkedList<T>.middle() : Node<T>? {
-    var fast = this.head
-    var slow = this.head
-    while (fast != null) {
-        fast = fast.next
-        if (fast != null) {
-            fast = fast.next
-            slow = slow?.next
-        }
-    }
-    return slow
 }
