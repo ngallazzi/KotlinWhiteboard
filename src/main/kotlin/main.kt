@@ -38,6 +38,7 @@ fun main() {
     val list = LinkedList(1, 2, 3, 4, 5)
     val other = LinkedList(-1, 0, 2, 2, 7)
     println(list.merge(other))
+    list.printReversedIterative()
 }
 
 fun <T> LinkedList<T>.reverse(): LinkedList<T> {
@@ -74,4 +75,14 @@ fun LinkedList<Int>.merge(list: LinkedList<Int>): LinkedList<Int> {
     }
 
     return destination
+}
+
+fun <T> LinkedList<T>.printReversedIterative() {
+    val destination = LinkedList<T>()
+    var source = this.head
+    while (source?.next != null) {
+        destination.push(source.value)
+        source = source.next
+    }
+    println(destination)
 }
