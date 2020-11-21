@@ -32,24 +32,61 @@
  * THE SOFTWARE.
  */
 
+interface Stack<T> {
 
+  fun push(element: T)
 
-fun main() {
-    val notMatching = "((((Hello world!)"
-    val matching = "(Hello world!)"
-    println(notMatching.parenthesisMatch())
-    println(matching.parenthesisMatch())
+  fun pop(): T?
+
+  val count: Int
+
+  fun peek(): T?
+
+  val isEmpty: Boolean
+    get() = count == 0
 }
 
-fun String.parenthesisMatch(): Boolean {
-    val chars = this.toCharArray()
-    val parenthesis = chars.filter { it == ')' || it == '(' }
-    val parenthesisStack = StackImpl<Char>()
-    for (c in parenthesis) {
-        when (c) {
-            '(' -> parenthesisStack.push('(')
-            ')' -> parenthesisStack.pop()
-        }
+class StackImpl<T> : Stack<T> {
+
+  private val storage = arrayListOf<T>()
+
+  companion object {
+    fun <T> create(items: Iterable<T>): Stack<T> {
+      val stack = StackImpl<T>()
+      for (item in items) {
+        stack.push(item)
+      }
+      return stack
     }
-    return parenthesisStack.isEmpty
+  }
+
+  override fun push(element: T) {
+    storage.add(element)
+  }
+
+  override fun pop(): T? {
+    if (isEmpty) {
+      return null
+    }
+    return storage.removeAt(count - 1)
+  }
+
+  override fun peek(): T? {
+    return storage.lastOrNull()
+  }
+
+  override val count: Int
+    get() = storage.size
+
+  override fun toString() = buildString {
+    appendln("----top----")
+    storage.asReversed().forEach {
+      appendln("$it")
+    }
+    appendln("-----------")
+  }
+}
+
+fun <T> stackOf(vararg elements: T): Stack<T> {
+  return StackImpl.create(elements.asList())
 }

@@ -23,9 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31bf348a-4e8c-459d-b0e6-84ddc7ec5b4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Stack.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +82,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="KotlinWhiteboard.main" />
@@ -107,7 +116,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605893833522</updated>
       <workItem from="1605893834589" duration="6534000" />
-      <workItem from="1605955463645" duration="858000" />
+      <workItem from="1605955463645" duration="1107000" />
+      <workItem from="1605957628531" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="my working (not optimized) solution">
       <created>1605894879071</created>
@@ -123,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605955751333</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(Print reversed linked list - iterative): Solution by using push and a destination list">
+      <created>1605956738980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605956738980</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="my working (not optimized) solution" />
     <MESSAGE value="feat(Merge a liked list): My solution, extension function on LinkedList" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(Merge a liked list): My solution, extension function on LinkedList" />
+    <MESSAGE value="feat(Print reversed linked list - iterative): Solution by using push and a destination list" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(Print reversed linked list - iterative): Solution by using push and a destination list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605894007782">
@@ -156,74 +174,53 @@
     </state>
     <state width="419" height="466" key="DebuggerActiveHint/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894177811" />
     <state width="453" height="467" key="DebuggerActiveHint/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955147841" />
-    <state width="1878" height="329" key="GridCell.Tab.0.bottom" timestamp="1605955232716">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.0.bottom" timestamp="1605956791885">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.0.bottom/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158448" />
+    <state width="1878" height="329" key="GridCell.Tab.0.bottom/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791885" />
     <state width="1878" height="329" key="GridCell.Tab.0.bottom/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232716" />
-    <state width="1878" height="329" key="GridCell.Tab.0.center" timestamp="1605955232714">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.0.center" timestamp="1605956791884">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.0.center/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158448" />
+    <state width="1878" height="329" key="GridCell.Tab.0.center/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791884" />
     <state width="1878" height="329" key="GridCell.Tab.0.center/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232714" />
-    <state width="1878" height="329" key="GridCell.Tab.0.left" timestamp="1605955232713">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.0.left" timestamp="1605956791883">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.0.left/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158447" />
+    <state width="1878" height="329" key="GridCell.Tab.0.left/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791883" />
     <state width="1878" height="329" key="GridCell.Tab.0.left/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232713" />
-    <state width="1878" height="329" key="GridCell.Tab.0.right" timestamp="1605955232715">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.0.right" timestamp="1605956791884">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.0.right/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158448" />
+    <state width="1878" height="329" key="GridCell.Tab.0.right/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791884" />
     <state width="1878" height="329" key="GridCell.Tab.0.right/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232715" />
-    <state width="1878" height="329" key="GridCell.Tab.1.bottom" timestamp="1605955232718">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.1.bottom" timestamp="1605956791886">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.1.bottom/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158529" />
+    <state width="1878" height="329" key="GridCell.Tab.1.bottom/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791886" />
     <state width="1878" height="329" key="GridCell.Tab.1.bottom/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232718" />
-    <state width="1878" height="329" key="GridCell.Tab.1.center" timestamp="1605955232717">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.1.center" timestamp="1605956791885">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.1.center/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158528" />
+    <state width="1878" height="329" key="GridCell.Tab.1.center/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791885" />
     <state width="1878" height="329" key="GridCell.Tab.1.center/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232717" />
-    <state width="1878" height="329" key="GridCell.Tab.1.left" timestamp="1605955232717">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.1.left" timestamp="1605956791885">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.1.left/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158528" />
+    <state width="1878" height="329" key="GridCell.Tab.1.left/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791885" />
     <state width="1878" height="329" key="GridCell.Tab.1.left/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232716" />
-    <state width="1878" height="329" key="GridCell.Tab.1.right" timestamp="1605955232718">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state width="1878" height="329" key="GridCell.Tab.1.right" timestamp="1605956791886">
+      <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state width="1878" height="329" key="GridCell.Tab.1.right/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605894158529" />
+    <state width="1878" height="329" key="GridCell.Tab.1.right/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956791886" />
     <state width="1878" height="329" key="GridCell.Tab.1.right/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955232718" />
     <state x="469" y="155" key="SettingsEditor" timestamp="1605955439050">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="469" y="155" key="SettingsEditor/1920.203.1440.877/0.23.1920.988@0.23.1920.988" timestamp="1605955439050" />
-    <state x="560" y="256" key="Vcs.Push.Dialog.v2" timestamp="1605955754896">
+    <state x="560" y="256" key="Vcs.Push.Dialog.v2" timestamp="1605956740950">
       <screen x="0" y="23" width="1920" height="986" />
     </state>
-    <state x="560" y="256" key="Vcs.Push.Dialog.v2/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605955754896" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/main.kt</url>
-          <line>75</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/main.kt</url>
-          <line>66</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/main.kt</url>
-          <line>70</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="560" y="256" key="Vcs.Push.Dialog.v2/1920.203.1440.877/0.23.1920.986@0.23.1920.986" timestamp="1605956740950" />
   </component>
 </project>
