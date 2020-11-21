@@ -37,15 +37,14 @@
 fun main() {
     val notMatching = "((((Hello world!)"
     val matching = "(Hello world!)"
-    println(notMatching.parenthesisMatch())
-    println(matching.parenthesisMatch())
+    println(notMatching.parenthesesMatch())
+    println(matching.parenthesesMatch())
 }
 
-fun String.parenthesisMatch(): Boolean {
+fun String.parenthesesMatch(): Boolean {
     val chars = this.toCharArray()
-    val parenthesis = chars.filter { it == ')' || it == '(' }
     val parenthesisStack = StackImpl<Char>()
-    for (c in parenthesis) {
+    for (c in chars) {
         when (c) {
             '(' -> parenthesisStack.push('(')
             ')' -> parenthesisStack.pop()
