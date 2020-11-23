@@ -1,3 +1,6 @@
+import java.time.LocalDate
+import java.time.LocalDateTime
+
 /*
  * Copyright (c) 2020 Razeware LLC
  *
@@ -35,20 +38,20 @@
 
 
 fun main() {
-  val queue = ArrayListQueue<String>().apply {
-    enqueue("Luke")
-    enqueue("Leia")
-    enqueue("Han")
-    enqueue("Chewie")
-  }
-  queue.getNextPlayer()
+    val queue = ArrayListQueue<String>().apply {
+        enqueue("Luke")
+        enqueue("Leia")
+        enqueue("Han")
+        enqueue("Chewie")
+    }
+    for (i in 0 until queue.count * queue.count) {
+        println(LocalDateTime.now().toString() + """ - Next player is:${queue.nextPlayer()}""")
+        Thread.sleep(500)
+    }
 }
 
-fun ArrayListQueue<String>.getNextPlayer(){
-    for (i in 0 until this.count){
-      println(this)
-      val toRemove = this.peek()
-      this.dequeue()
-      this.enqueue(toRemove!!)
-    }
+fun <T> Queue<T>.nextPlayer(): T? {
+    val removed = this.dequeue() ?: return null
+    this.enqueue(removed)
+    return removed
 }
