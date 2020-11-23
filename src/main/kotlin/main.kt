@@ -35,20 +35,20 @@
 
 
 fun main() {
-    val notMatching = "((((Hello world!)"
-    val matching = "(Hello world!)"
-    println(notMatching.parenthesesMatch())
-    println(matching.parenthesesMatch())
+  val queue = ArrayListQueue<String>().apply {
+    enqueue("Luke")
+    enqueue("Leia")
+    enqueue("Han")
+    enqueue("Chewie")
+  }
+  queue.getNextPlayer()
 }
 
-fun String.parenthesesMatch(): Boolean {
-    val chars = this.toCharArray()
-    val parenthesisStack = StackImpl<Char>()
-    for (c in chars) {
-        when (c) {
-            '(' -> parenthesisStack.push('(')
-            ')' -> parenthesisStack.pop()
-        }
+fun ArrayListQueue<String>.getNextPlayer(){
+    for (i in 0 until this.count){
+      println(this)
+      val toRemove = this.peek()
+      this.dequeue()
+      this.enqueue(toRemove!!)
     }
-    return parenthesisStack.isEmpty
 }

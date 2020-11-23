@@ -32,12 +32,26 @@
  * THE SOFTWARE.
  */
 
-data class Node<T>(var value: T, var next: Node<T>? = null) {
+class ArrayListQueue<T> : Queue<T> {
+
+  private val list = arrayListOf<T>()
+
+  override fun enqueue(element: T): Boolean {
+    list.add(element)
+    return true
+  }
+
+  override fun dequeue(): T? {
+    return if (isEmpty) null else list.removeAt(0)
+  }
+
+  override val count: Int
+    get() = list.size
+
+  override fun peek(): T? = list.getOrNull(0)
+
+
   override fun toString(): String {
-    return if (next != null) {
-      "$value -> ${next.toString()}"
-    } else {
-      "$value"
-    }
+    return list.toString()
   }
 }
